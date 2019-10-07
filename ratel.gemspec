@@ -15,10 +15,10 @@ Gem::Specification.new do |spec|
   spec.homepage      = 'https://https://github.com/petlove/ratel'
   spec.license       = 'MIT'
 
-  spec.files         = Dir['{lib}/**/*', 'CHANGELOG.md', 'MIT-LICENSE', 'README.md']
+  spec.files         = Dir['{app}/**/*', '{lib}/**/*', 'CHANGELOG.md', 'MIT-LICENSE', 'README.md']
   spec.required_ruby_version = '>= 2.6.4'
 
-  spec.add_dependency 'activesupport', '>= 5.0'
+  spec.add_dependency 'activemodel', '>= 5.0'
 
   spec.add_development_dependency 'bundler', '~> 2.0'
   spec.add_development_dependency 'pry-byebug', '>= 3.7.0'

@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     ratel (1.0.0)
-      activesupport (>= 5.0)
+      activemodel (>= 5.0)
 
 GEM
   remote: https://rubygems.org/

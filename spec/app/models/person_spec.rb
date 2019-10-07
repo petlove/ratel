@@ -20,10 +20,10 @@ RSpec.describe Person, type: :model do
     context 'with invalid name' do
       let(:name) { 'cachorrao' }
 
-      it {
+      it do
         expect { subject }.to raise_error(ActiveModel::ValidationError,
                                           'Validation failed: Name deve ser um valor válido')
-      }
+      end
     end
   end
 end

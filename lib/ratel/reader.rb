@@ -8,11 +8,7 @@ module Ratel
 
     class << self
       def read
-        @read ||= file_names.flat_map(&method(:patterns)).compact
-      end
-
-      def clear!
-        @read = nil
+        file_names.flat_map(&method(:patterns)).compact
       end
 
       private

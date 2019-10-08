@@ -6,10 +6,7 @@ RSpec.describe Ratel::Validator, type: :model do
   describe '.valid?' do
     subject { described_class.valid?(value) }
 
-    before do
-      Ratel::Reader.clear!
-      allow(Ratel::Reader).to receive(:file_names).and_return(['spec/ratel/data/patterns.yml'])
-    end
+    before { allow(Ratel::Reader).to receive(:file_names).and_return(['spec/ratel/data/patterns.yml']) }
 
     context 'with valid value' do
       let(:value) { 'linqueta' }

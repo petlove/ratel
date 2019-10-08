@@ -6,10 +6,7 @@ RSpec.describe Person, type: :model do
   describe 'validate!' do
     subject { described_class.new(name).validate! }
 
-    before do
-      Ratel::Reader.clear!
-      allow(Ratel::Reader).to receive(:file_names).and_return(['spec/ratel/data/patterns.yml'])
-    end
+    before { allow(Ratel::Reader).to receive(:file_names).and_return(['spec/ratel/data/patterns.yml']) }
 
     context 'with valid name' do
       let(:name) { 'linqueta' }

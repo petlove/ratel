@@ -25,7 +25,7 @@ class Person
 
   attr_accessor :name
 
-  validates :name, valid_word: true
+  validates :name, valid_text: true
 
   #...
 end

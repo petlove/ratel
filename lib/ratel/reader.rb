@@ -4,7 +4,7 @@ require 'yaml'
 
 module Ratel
   module Reader
-    DIR_FILES = 'lib/ratel/data/*'
+    DIR_FILES = 'app/config/ratel/*'
 
     class << self
       def read

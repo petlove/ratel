@@ -4,7 +4,8 @@ require 'yaml'
 
 module Ratel
   module Reader
-    DIR_FILES = 'lib/ratel/data/*'
+    DIR_FILES = 'config/ratel/*'
+    GEM_FILES = "#{File.expand_path('../..', __dir__)}/#{DIR_FILES}"
 
     class << self
       def read
@@ -18,7 +19,7 @@ module Ratel
       end
 
       def file_names
-        Dir[DIR_FILES]
+        Dir[DIR_FILES, GEM_FILES]
       end
 
       def read_file(file_name)

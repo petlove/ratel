@@ -14,6 +14,36 @@ Add this line to your application's Gemfile:
 gem 'ratel', github: 'petlove/ratel'
 ```
 
+## Using
+
+You can use this gem in two ways:
+
+1. Using in active models validates
+```ruby
+class Person
+  include ActiveModel::Validations
+
+  attr_accessor :name
+
+  validates :name, valid_word: true
+
+  #...
+end
+```
+
+2. Using the validator
+```ruby
+Ratel::Validator.valid?('linqueta')
+```
+
+### Error output
+Will be raised this error when the value was invalid:
+
+```ruby
+Person.new('cachorrao').validate!
+# => ActiveModel::ValidationError: Validation failed: Name deve ser um valor válido
+```
+
 ## Contributing
 
 1. Fork it

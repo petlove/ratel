@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
-lib = File.expand_path('lib', __dir__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+$LOAD_PATH.push File.expand_path('lib', __dir__)
 require 'ratel/version'
 
 Gem::Specification.new do |spec|
@@ -15,7 +14,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = 'https://https://github.com/petlove/ratel'
   spec.license       = 'MIT'
 
-  spec.files         = Dir['{app}/**/*', '{lib}/**/*', 'CHANGELOG.md', 'MIT-LICENSE', 'README.md']
+  spec.files         = Dir['{app,config,lib}/**/*', 'CHANGELOG.md', 'MIT-LICENSE', 'README.md']
   spec.required_ruby_version = '>= 2.6.4'
 
   spec.add_dependency 'activemodel', '>= 5.0'

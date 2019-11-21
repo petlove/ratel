@@ -19,6 +19,7 @@ gem 'ratel', github: 'petlove/ratel'
 You can use this gem in two ways:
 
 1. Using in active models validates
+
 ```ruby
 class Person
   include ActiveModel::Validations
@@ -31,12 +32,14 @@ class Person
 end
 ```
 
-2. Using the validator
+1. Using the validator
+
 ```ruby
 Ratel::Validator.valid?('linqueta')
 ```
 
 ### Error output
+
 Will be raised this error when the value was invalid:
 
 ```ruby

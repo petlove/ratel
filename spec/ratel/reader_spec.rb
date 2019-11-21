@@ -17,7 +17,7 @@ RSpec.describe Ratel::Reader, type: :model do
     context 'with files' do
       let(:files) { ['spec/ratel/data/patterns.yml'] }
 
-      it { is_expected.to eq(%w[abençoado cachorrao]) }
+      it { is_expected.to eq(%w[abençoado cachorrao puta]) }
     end
   end
 end

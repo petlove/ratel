@@ -4,7 +4,7 @@ module Ratel
   module Validator
     class << self
       def valid?(value)
-        !value.match(/\bcondition\b/)
+        !value.match(/\b#{condition}\b/)
       end
 
       private

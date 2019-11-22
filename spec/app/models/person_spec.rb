@@ -15,7 +15,7 @@ RSpec.describe Person, type: :model do
     end
 
     context 'with invalid name' do
-      let(:name) { 'puta' }
+      let(:name) { 'A puta é top' }
 
       it do
         expect { subject }.to raise_error(ActiveModel::ValidationError,

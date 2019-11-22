@@ -9,13 +9,13 @@ RSpec.describe Person, type: :model do
     before { allow(Ratel::Reader).to receive(:file_names).and_return(['spec/ratel/data/patterns.yml']) }
 
     context 'with valid name' do
-      let(:name) { 'linqueta' }
+      let(:name) { 'reputação' }
 
       it { is_expected.to be_truthy }
     end
 
     context 'with invalid name' do
-      let(:name) { 'cachorrao' }
+      let(:name) { 'A puta é top' }
 
       it do
         expect { subject }.to raise_error(ActiveModel::ValidationError,

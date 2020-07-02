@@ -1,9 +1,7 @@
 # frozen_string_literal: true
 
 class ValidTextValidator < ActiveModel::EachValidator
-  ERROR_MESSAGE = 'deve ser um valor válido'
-
   def validate_each(record, attribute, value)
-    record.errors.add(attribute, ERROR_MESSAGE) unless Ratel::Validator.valid?(value.to_s)
+    record.errors.add(attribute, "A palavra #{value} é inválida :(") unless Ratel::Validator.valid?(value.to_s)
   end
 end

@@ -2,10 +2,10 @@
 
 class ValidTextValidator < ActiveModel::EachValidator
   def validate_each(record, attribute, value)
-    record.errors.add(attribute, "#{bad_word(value)} é inválido(a)") unless Ratel::Validator.valid?(value.to_s)
-  end
+    bad_word = Ratel::Validator.invalid?(value.to_s)
 
-  def bad_word(value)
-    Ratel::Validator.invalid_word(value)
+    return unless bad_word
+
+    record.errors.add(attribute, "#{bad_word} é inválido(a)")
   end
 end

@@ -19,7 +19,7 @@ RSpec.describe Person, type: :model do
 
       it do
         expect { subject }.to raise_error(ActiveModel::ValidationError,
-                                          'Validation failed: Name deve ser um valor válido')
+                                          'Validation failed: Name puta é inválido(a)')
       end
     end
   end

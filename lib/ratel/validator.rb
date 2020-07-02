@@ -7,6 +7,10 @@ module Ratel
         !value.match(/\b#{condition}\b/)
       end
 
+      def invalid_word(value)
+        value.scan(/\b#{condition}\b/).first
+      end
+
       private
 
       def condition

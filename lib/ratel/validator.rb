@@ -3,8 +3,8 @@
 module Ratel
   module Validator
     class << self
-      def invalid?(value)
-        value.scan(/\b#{condition}\b/).first
+      def match(value)
+        value.match(/\b#{condition}\b/)&.[](0)
       end
 
       private

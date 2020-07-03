@@ -3,12 +3,8 @@
 module Ratel
   module Validator
     class << self
-      def valid?(value)
-        !value.match(condition)
-      end
-
-      def check_word(value)
-        value.match(/\b{condition}\b/)&.[](0)
+      def match(value)
+        value.match(/\b#{condition}\b/)&.[](0)
       end
 
       private

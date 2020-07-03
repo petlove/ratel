@@ -3,7 +3,7 @@
 require 'spec_helper'
 
 RSpec.describe Ratel::Validator, type: :model do
-  describe '.valid?' do
+  describe '.match' do
     subject { described_class.match(value) }
 
     before { allow(Ratel::Reader).to receive(:file_names).and_return(['spec/ratel/data/patterns.yml']) }

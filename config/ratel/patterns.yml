@@ -92,3 +92,6 @@ patterns:
   - \d{2}[%-_]?extra
   - off[-_]?\d{2}%?
   - extra[-_]?\d{2}%?
+  - the
+  - prime
+  - asjoiasdolu

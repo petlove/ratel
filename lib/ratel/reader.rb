@@ -5,7 +5,7 @@ require 'yaml'
 module Ratel
   module Reader
     DIR_FILES = 'config/ratel/*'
-    GEM_FILES = "#{File.expand_path('../..', __dir__)}/#{DIR_FILES}"
+    GEM_FILES = "#{File.expand_path('../..', __dir__)}/#{DIR_FILES}".freeze
 
     class << self
       def read

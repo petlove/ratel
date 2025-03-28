@@ -15,7 +15,7 @@ Gem::Specification.new do |spec|
   spec.license       = 'MIT'
 
   spec.files         = Dir['{app,config,lib}/**/*', 'CHANGELOG.md', 'MIT-LICENSE', 'README.md']
-  spec.required_ruby_version = '>= 2.6.5'
+  spec.required_ruby_version = '= 2.7.0'
 
   spec.add_dependency 'activemodel', '>= 6.0'
 
